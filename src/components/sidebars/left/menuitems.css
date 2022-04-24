@@ -1,0 +1,16 @@
+.menu-parent {
+  margin-top: 1rem;
+}
+
+.menu-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 1rem;
+  color: #d6d2e8;
+}
+
+.menu-item-active {
+  color: #8d82ba;
+}

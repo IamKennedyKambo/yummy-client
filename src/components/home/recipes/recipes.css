@@ -1,0 +1,20 @@
+.recipe-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.recipe-card {
+  margin: 10px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(4, 105, 236, 0.2);
+  transition: 0.3s;
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-image {
+  width: 100%;
+}
