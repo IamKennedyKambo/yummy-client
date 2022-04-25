@@ -192,13 +192,6 @@ const MaterialBox = styled.div`
   }
 `;
 
-const MaterialImageView = styled.img`
-  width: 100%;
-  height: 100%;
-  outline: none;
-  border-radius: 5px;
-`;
-
 const Grid1 = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

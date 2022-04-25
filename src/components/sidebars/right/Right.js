@@ -9,17 +9,6 @@ const Right = () => {
     setRecipeId(localStorage.getItem("recipe"));
   });
 
-  const getRecipe = async () => {
-    try {
-      const apiData = await fetch(
-        `https://yummy-army.herokuapp.com/recipes/${recipeId}`
-      );
-
-      const jsonData = await apiData.json();
-      setRecipe(jsonData);
-    } catch (error) {}
-  };
-
   const renderView = () => {
     if (Array.isArray(recipe) || Object.entries(recipe).length === 0) {
       console.log(recipe);
@@ -53,6 +42,17 @@ const Right = () => {
   };
 
   useEffect(() => {
+    const getRecipe = async () => {
+      try {
+        const apiData = await fetch(
+          `https://yummy-army.herokuapp.com/recipes/${recipeId}`
+        );
+
+        const jsonData = await apiData.json();
+        setRecipe(jsonData);
+      } catch (error) {}
+    };
+
     getRecipe();
   }, [recipeId]);
 
