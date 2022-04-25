@@ -10,8 +10,8 @@ const Create = () => {
     difficulty: "",
     imageUrl: "",
     caloriesPerServing: null,
-    ingredients: [],
-    steps: [],
+    ingredients: "",
+    steps: "",
     prepTime: "",
   });
 
@@ -30,8 +30,8 @@ const Create = () => {
       difficulty: "",
       imageUrl: "",
       caloriesPerServing: null,
-      ingredients: [],
-      steps: [],
+      ingredients: "",
+      steps: "",
       prepTime: "",
     });
   };
@@ -114,12 +114,14 @@ const Create = () => {
           rows="4"
           placeholder="Enter description"
           name="description"
+          value={state.description}
           onChange={onValueChange}
         />
         <MaterialTextArea
           rows="4"
           name="ingredients"
           onChange={onValueChange}
+          value={state.ingredients}
           placeholder="Enter comma separated ingredients"
         />
       </Grid2>
@@ -127,6 +129,7 @@ const Create = () => {
       <MaterialTextArea
         rows="4"
         name="steps"
+        value={state.steps}
         onChange={onValueChange}
         placeholder="Enter comma separated steps"
       />

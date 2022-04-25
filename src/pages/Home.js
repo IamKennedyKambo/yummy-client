@@ -1,11 +1,10 @@
 import React from "react";
-import Recipes from "../components/home/recipes/Recipes";
-import Search from "../components/home/Search";
+import Recipes from "../components/recipes/Recipes";
 
 const Home = () => {
+
   return (
     <div>
-      <Search />
       <Recipes />
     </div>
   );
