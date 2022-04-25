@@ -17,7 +17,6 @@ const Content = () => {
         `https://yummy-army.herokuapp.com/recipes?title=${query}`
       );
 
-      console.log(`https://yummy-army.herokuapp.com/recipes?title=${query}`);
       const jsonData = await rawData.json();
       setRecipes(jsonData);
     } catch (error) {}

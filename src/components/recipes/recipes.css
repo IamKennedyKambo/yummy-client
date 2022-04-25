@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
+  overflow-y: scroll;
+  height: 75vh;
 }
 
 .recipe-card {
