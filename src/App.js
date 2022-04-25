@@ -10,9 +10,9 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <body className="body">
+    <body>
       <main>
-        <section>
+        <section className="body">
           <AnimatePresence exitBeforeEnter initial={false}>
             <Switch
               className="switch"

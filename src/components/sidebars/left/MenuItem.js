@@ -11,7 +11,7 @@ export const MenuItem = ({ title, icon }) => {
       activeClassName="menu-item-active"
     >
       {icon}
-      <h3>{title}</h3>
+      <h4>{title}</h4>
     </NavLink>
   );
 };

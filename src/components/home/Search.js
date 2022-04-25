@@ -13,9 +13,9 @@ const Search = () => {
 
 const RoundedInput = styled.input`
   outline: none;
-  border-radius: 15px;
-  width: 75%;
-  height: 4vh;
+  border-radius: 20px;
+  width: 85%;
+  height: 5vh;
   border: none;
   margin-top: 3rem;
   margin-bottom: 1rem;

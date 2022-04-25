@@ -27,8 +27,10 @@ const Recipe = ({ data }) => {
   return (
     <div className="recipe-card" onClick={() => updateLocalStorage()}>
       <img className="recipe-image" src={recipe.imageUrl} alt={recipe.title} />
-      <h5>{recipe.title}</h5>
-      <p>{recipe.cuisine}</p>
+      <div className="recipe-content">
+        <h5>{recipe.title}</h5>
+        <p>{recipe.cuisine}</p>
+      </div>
     </div>
   );
 };
