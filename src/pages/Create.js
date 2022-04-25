@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useFilePicker } from "use-file-picker";
 import SimpleFileUpload from "react-simple-file-upload";
 
 const Create = () => {
@@ -15,14 +14,6 @@ const Create = () => {
     steps: [],
     prepTime: "",
   });
-
-  // const [openFileSelector, { filesContent, clear }] = useFilePicker({
-  //   readAs: "DataURL",
-  //   multiple: false,
-  //   limitFilesConfig: { max: 1 },
-  //   maxFileSize: 10,
-  //   accept: [".jpg", ".jpeg", ".png"],
-  // });
 
   const onValueChange = (event) => {
     setState((state) => ({
@@ -52,25 +43,7 @@ const Create = () => {
       body: JSON.stringify(state),
     };
 
-    // const formData = new FormData();
-
-    // const imageRequestOptions = {
-    //   method: "POST",
-    //   body: formData,
-    //   credentials: "same-origin",
-    // };
-
-    // filesContent.map((file, index) => formData.append("imageUrl", file));
-
     try {
-      // const uploadPhotoRequest = fetch(
-      //   "https://yummy-army.herokuapp.com/api/v1/uplod-images/",
-      //   imageRequestOptions
-      // );
-
-      // uploadPhotoRequest
-      //   .then((url) => {
-      //     setState([...state, { imageUrl: url }]);
       fetch("https://yummy-army.herokuapp.com/recipes", recipeRequestOptions)
         .then((res) => res.json())
         .then((message) => {
@@ -87,19 +60,6 @@ const Create = () => {
       imageUrl: url,
     }));
   };
-
-  // const renderImageView = () => {
-  //   if (filesContent.length === 0) {
-  //     return <h5 style={{ margin: "0 auto" }}>Click here to choose file</h5>;
-  //   }
-  //   return mapFiles();
-  // };
-
-  // const mapFiles = () => {
-  //   return filesContent.map((file, index) => {
-  //     return <MaterialImageView src={file.content} alt={file.name} />;
-  //   });
-  // };
 
   return (
     <div style={{ padding: "1rem" }}>
@@ -172,8 +132,6 @@ const Create = () => {
       />
 
       <Grid2>
-        {/* <MaterialBox onClick={() => openFileSelector()}> */}
-        {/* {renderImageView()} */}
         <MaterialBox>
           <SimpleFileUpload
             apiKey="f6e4616573bf24820217b9b0f65d76fe"
@@ -189,7 +147,6 @@ const Create = () => {
             gap: "1rem",
           }}
         >
-          {/* <ColoredButton onClick={() => clear()}>Remove image</ColoredButton> */}
           <ColoredButton onClick={() => clearState()}>
             Clear Fields
           </ColoredButton>
