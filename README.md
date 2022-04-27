@@ -24,6 +24,14 @@ Before you experience the app, your need to have the following installed in your
 4. Once the process is completed successfully, type `npm start` in your terminal to build and launch the project.
 5. If it doesn't open in your browser automatically, open a new tab and type `localhost:3000`
 
+## Folder structure
+
+The app has one major directory; src where all the project source code lives. Inside it your will find;
+
+1. Assets - contains assets e.g. svg files for use in components
+2. Components - contains components used to build the pages
+3. Pages - contains pages the app can navigate to
+
 ## Usage
 
 The app has two pages:
